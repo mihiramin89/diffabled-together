@@ -1,0 +1,82 @@
+.-appBar {
+  .app-bar-content {
+    position: fixed;
+    top: 20px;
+    height: inherit;
+    overflow-x: auto;
+    overflow-y: hidden;
+    z-index: 10;
+
+    .full-height {
+      height: 100%;
+    }
+
+    [data-react-toolbox='button'] {
+      border-radius: none;
+      margin-left: 12px;
+      margin-right: 12px;
+      min-width: 2rem;
+
+      span {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      &.-active {
+        opacity: 0.8;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    .exit-button {
+      height: 100%;
+
+      button {
+        height: 100%;
+      }
+    }
+
+    .divider {
+      width: 1px;
+    }
+
+    strong.title {
+      display: flex;
+
+      &:focus {
+        outline: none;
+      }
+
+      span {
+        border-left: 1em;
+        border-right: 1em;
+
+        &:focus {
+          outline: none;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .left-padding {
+        padding-left: 24px;
+        padding-right: 4px;
+      }
+
+      .show-on-hover {
+        visibility: hidden;
+      }
+
+      &:hover {
+        .show-on-hover {
+          visibility: visible;
+        }
+      }
+    }
+  }
+}
