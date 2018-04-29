@@ -2,6 +2,9 @@
 body {
   margin-top: 0;
   margin-left: 0;
+  font-family: stolzl, sans-serif !important;
+  font-style: normal;
+  font-weight: 100;
 }
 
 .layout {
@@ -57,24 +60,5 @@ body {
       z-index: 100;
       height: 100%;
     }
-  }
-
-  [data-react-toolbox='progress-bar'] {
-    position: absolute;
-    z-index: 10;
-    top: 3.75rem;
-
-    &.-main-container-loading {
-      top: 4rem;
-    }
-
-    &.-hide-loader {
-      display: none;
-    }
-  }
-
-  [data-react-toolbox='progress-bar'].-bottom-sheet {
-    top: 6rem !important;
-    z-index: 200 !important;
   }
 }
