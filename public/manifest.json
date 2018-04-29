@@ -1,13 +1,15 @@
 {
-    "name": "Simple app",
-    "icons": [
-        {
-            "src": "/android-chrome-72x72.png",
-            "sizes": "72x72",
-            "type": "image/png"
-        }
-    ],
-    "theme_color": "#311b92",
-    "background_color": "#311b92",
-    "display": "standalone"
+  "short_name": "React App",
+  "name": "Create React App Sample",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
 }
