@@ -21,7 +21,8 @@ export default class StandardAppBar extends React.Component {
   constructor(props) {
     super(props);
 
-    this.interval = setInterval(this._changeIndex, 7000);
+    this.interval = setInterval(this._changeIndex, 3000);
+    this.leftInterval = setInterval(this._changeLeftIndex, 5000);
     this.state = {
       index: 0,
       images: [
@@ -34,11 +35,27 @@ export default class StandardAppBar extends React.Component {
           alt: 'header2',
         },
       ],
+      leftIndex: 0,
+      leftImages: [
+        {
+          src: 'assets/leftheader.png',
+          alt: 'left header1',
+        },
+        {
+          src: 'assets/leftheader2.png',
+          alt: 'left header2',
+        },
+        {
+          src: 'assets/leftheader3.png',
+          alt: 'left header3',
+        },
+      ],
     };
   }
 
   componentWillUnmount() {
     clearInterval(this.interval);
+    clearInterval(this.leftInterval);
   }
 
   _changeIndex = () => {
@@ -47,6 +64,15 @@ export default class StandardAppBar extends React.Component {
     } else {
       const newIndex = this.state.index + 1;
       this.setState({ index: newIndex });
+    }
+  }
+
+  _changeLeftIndex = () => {
+    if (this.state.leftIndex === this.state.leftImages.length - 1) {
+      this.setState({ leftIndex: 0 });
+    } else {
+      const newIndex = this.state.leftIndex + 1;
+      this.setState({ leftIndex: newIndex });
     }
   }
 
@@ -68,6 +94,24 @@ export default class StandardAppBar extends React.Component {
     return images;
   }
 
+  _renderLeftImages = () => {
+    const images = [];
+
+    this.state.leftImages.forEach((item, index) => {
+      const classes = equals(this.state.leftIndex, index) ? 'left-image -show' : 'left-image -hidden';
+      images.push(
+        <img
+          alt={item.alt}
+          className={classes}
+          key={item.src}
+          src={item.src}
+        />,
+      );
+    });
+
+    return images;
+  }
+
   render() {
     return (
       <Flexbox
@@ -76,6 +120,7 @@ export default class StandardAppBar extends React.Component {
         className="standard-bar"
         flexDirection="column"
       >
+        {this._renderLeftImages()}
         <Flexbox
           alignItems="center"
           justifyContent="center"

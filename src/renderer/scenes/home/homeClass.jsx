@@ -1,7 +1,7 @@
 import React from 'react';
 import Flexbox from 'flexbox-react';
 
-import { Card } from 'react-toolbox/lib/card';
+import { Card, CardMedia } from 'react-toolbox/lib/card';
 
 export default class Home extends React.Component {
   render() {
@@ -75,18 +75,48 @@ export default class Home extends React.Component {
             <Card
               className="event-item main-event1"
             >
-              <span>Learn More</span>
+              <CardMedia
+                aspectRatio="wide"
+                image="assets/Hospitalevent.png"
+              />
+              <a
+                href="https://www.google.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Learn more
+              </a>
             </Card>
             <Card
               className="event-item main-event2"
             >
-              <span>Join Us!</span>
+              <CardMedia
+                aspectRatio="wide"
+                image="assets/Coffee.png"
+              />
+              <a
+                href="https://www.google.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Join Us!
+              </a>
             </Card>
           </Flexbox>
           <Card
             className="event-item main-event3"
           >
-            <span>Grab some swag!</span>
+            <CardMedia
+              aspectRatio="wide"
+              image="assets/Swag.png"
+            />
+            <a
+              href="https://www.google.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Grab some swag!
+            </a>
           </Card>
         </Flexbox>
         <Flexbox
@@ -136,10 +166,30 @@ export default class Home extends React.Component {
             </div>
           </Flexbox>
           <Card className="chapter1" >
-            <span>Join Us!</span>
+            <CardMedia
+              aspectRatio="wide"
+              image="assets/WrightState.png"
+            />
+            <a
+              href="https://www.google.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Join Us!
+            </a>
           </Card>
           <Card className="chapter2" >
-            <span>Join Us!</span>
+            <CardMedia
+              aspectRatio="wide"
+              image="assets/OhioState.png"
+            />
+            <a
+              href="https://www.google.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Join Us!
+            </a>
           </Card>
         </Flexbox>
       </Flexbox>
