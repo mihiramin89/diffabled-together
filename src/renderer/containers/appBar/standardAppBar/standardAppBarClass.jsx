@@ -26,16 +26,8 @@ export default class StandardAppBar extends React.Component {
       index: 0,
       images: [
         {
-          src: 'http://placekitten.com/g/400/200',
-          alt: 'test1',
-        },
-        {
-          src: 'assets/img1.jpg',
-          alt: 'test2',
-        },
-        {
-          src: 'assets/img2.jpg',
-          alt: 'test3',
+          src: 'assets/header.png',
+          alt: 'header',
         },
       ],
     };
@@ -86,26 +78,31 @@ export default class StandardAppBar extends React.Component {
           flexDirection="column"
           className="overlay"
         >
-          <div className="title">
-            <div>Diffabled</div>
-            <div>Together</div>
-          </div>
-          <Flexbox
-            className="menus"
-            alignItems="flex-start"
-          >
-            <div className="menu-item"> Events</div>
-            <div className="menu-item"> Our Story</div>
-            <div className="menu-item"> Chapters</div>
-          </Flexbox>
-        </Flexbox>
-        { equals(this.props.routeName, HOME) &&
-          <Button
-            color="accent"
-            label="Create a Chapter"
-            onClick={() => this.props.goTo(CHAPTERSTART)}
+          <img
+            alt="logo"
+            className="title"
+            src="assets/logo.png"
           />
-        }
+          { equals(this.props.routeName, HOME) &&
+            [
+              <Flexbox
+                alignItems="flex-start"
+                className="menus"
+                key="menus"
+              >
+                <a href="#events" className="menu-item"> Events</a>
+                <a href="#story" className="menu-item"> Our Story</a>
+                <a href="#chapters" className="menu-item"> Chapters</a>
+              </Flexbox>,
+              <Button
+                color="accent"
+                key="chapter"
+                label="Create a Chapter"
+                onClick={() => this.props.goTo(CHAPTERSTART)}
+              />,
+            ]
+          }
+        </Flexbox>
         {this._renderImages()}
       </Flexbox>
     );

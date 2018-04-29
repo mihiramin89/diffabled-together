@@ -56,18 +56,18 @@ export default class Home extends React.Component {
             justifyContent="center"
           >
             <Card
-              className="main-event1"
+              className="event-item main-event1"
             >
               <span>Event 1</span>
             </Card>
             <Card
-              className="main-event2"
+              className="event-item main-event2"
             >
               <span>Event 2</span>
             </Card>
           </Flexbox>
           <Card
-            className="main-event3"
+            className="event-item main-event3"
           >
             <span>Event 3</span>
           </Card>
@@ -134,10 +134,11 @@ export default class Home extends React.Component {
           className="footer"
           width="100%"
         >
-          <div className="title">
-            <div>Diffabled</div>
-            <div>Together</div>
-          </div>
+          <img
+            alt="logo"
+            className="title"
+            src="assets/logo.png"
+          />
           <Flexbox
             className="menus"
             alignItems="center"

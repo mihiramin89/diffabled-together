@@ -6,15 +6,11 @@ import { equals } from 'ramda';
 import { concatClasses } from 'redux-modules/general/utils';
 import { LEFT, RIGHT } from 'redux-modules/layout/drawer/constants';
 import {
-  BASIC_INNER_MAIN,
   DISABLE_ALL,
   DISABLE_CONTENT,
   DISABLE_INNER_MAIN,
-  NO_LOAD,
 } from 'redux-modules/layout/loading/constants';
 import { HOME, SHEET } from 'redux-modules/router/constants';
-
-import ProgressBar from 'react-toolbox/lib/progress_bar';
 
 import Toast from 'containers/toast';
 import ErrorBoundary from 'containers/errorBoundary';
@@ -121,18 +117,6 @@ class Layout extends React.Component {
         height="100vh"
       >
         <AppBar />
-        <ProgressBar
-          className={concatClasses([
-            this.bottomSheet ? '-bottom-sheet' : '',
-            (
-              equals(this.props.loadingType, DISABLE_INNER_MAIN) ||
-              equals(this.props.loadingType, BASIC_INNER_MAIN)
-            ) ? '-main-container-loading' : '',
-            (equals(this.props.loadingType, NO_LOAD) || !this.props.showLoading) ? '-hide-loader' : '',
-          ])}
-          mode="indeterminate"
-          type="linear"
-        />
         <Flexbox
           className={concatClasses([
             'layout-content',

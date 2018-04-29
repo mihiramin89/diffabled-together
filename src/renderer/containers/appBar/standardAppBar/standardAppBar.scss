@@ -1,33 +1,38 @@
 .standard-bar {
-  width: 100vw;
+  background-color: #C3E8E5;
   height: 700px;
   position: absolute;
   top: 0;
+  width: 100vw;
+  z-index: 2;
 
   .overlay {
     height: 100%;
     width: 100%;
-    background-color: #C2E8E5;
-    opacity: 0.85;
     z-index: 10;
     text-align: center;
     margin-top: -200px;
-  }
 
-  .button {
-    background-color: #FC615E;
-    color: #FFF !important;
-    z-index: 100;
-    width: 150px;
-    margin-top: -200px;
+    .button {
+      background-color: #FC615E;
+      border-radius: 4px;
+      color: #FFF !important;
+      z-index: 100;
+      width: 150px;
+
+      &:hover {
+        background-color: #FC615E;
+        opacity: 0.85;
+      }
+    }
   }
 
   .header-image {
-    position: absolute;
-    top: 0;
-    opacity: 1;
-    width: 100%;
     max-height: 700px;
+    opacity: 1;
+    position: absolute;
+    right: 0;
+    top: 0;
     z-index: 1;
 
     .-show {
@@ -49,6 +54,7 @@
     margin-right: 12px;
     margin-top: 12px;
     margin-bottom: 12px;
+    text-decoration: none;
     top: 0;
 
     &:hover {
