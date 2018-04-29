@@ -6,11 +6,13 @@ import { concatClasses } from 'redux-modules/general/utils';
 
 export default class CustomAppBar extends React.Component {
   static defaultProps = {
+    className: '',
     children: '',
     tall: false,
   };
 
   static propTypes = {
+    className: PropTypes.string,
     children: PropTypes.oneOfType([PropTypes.object, PropTypes.array, PropTypes.string]),
     showAppBar: PropTypes.bool.isRequired,
     tall: PropTypes.bool,
@@ -21,6 +23,7 @@ export default class CustomAppBar extends React.Component {
       'appBar',
       !this.props.showAppBar ? '-hide' : '',
       this.props.tall ? '-tall' : '',
+      this.props.className,
     ];
 
     return (

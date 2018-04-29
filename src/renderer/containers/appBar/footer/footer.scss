@@ -1,0 +1,51 @@
+.footer {
+  background-color: #C3E8E5;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  z-index: 2;
+
+  .overlay {
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    text-align: center;
+    margin-top: -200px;
+
+    .button {
+      background-color: #FC615E;
+      border-radius: 4px;
+      color: #FFF !important;
+      z-index: 100;
+      width: 150px;
+
+      &:hover {
+        background-color: #FC615E;
+        opacity: 0.85;
+      }
+    }
+  }
+
+  .title {
+    color: #000;
+    text-align: center;
+  }
+
+  .menu-item {
+    color: #48566D;
+    margin-right: 12px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    text-decoration: none;
+    top: 0;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

@@ -68,39 +68,8 @@
       color: #48566D;
       height: 200px;
       margin-right: 20px;
-    }
-  }
-
-  .footer {
-    display: block;
-    height: 50px;
-  
-    .title {
-      flex-grow: 1;
-      height: 50px;
-    }
-
-    .menus {
-      .menu-item {
-        color: #48566D;
-        text-decoration: none;
-        margin-right: 20px;
-
-        &:last-child {
-          margin-right: 0;
-        }
-
-        &:focus {
-          outline: none;
-        }
-      }
-
-      button,
-      button:hover {
-        background-color: transparent;
-        text-transform: capitalize;
-        color: #FC615E !important;
-      }
+      margin-top: -30px;
+      width: 200px;
     }
   }
 }

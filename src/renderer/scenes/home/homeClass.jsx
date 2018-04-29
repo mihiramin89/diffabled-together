@@ -1,19 +1,9 @@
 import React from 'react';
 import Flexbox from 'flexbox-react';
-import PropTypes from 'prop-types';
 
 import { Card } from 'react-toolbox/lib/card';
-import Button from 'components/button';
-
-import {
-  CHAPTERSTART,
-} from 'redux-modules/router/constants';
 
 export default class Home extends React.Component {
-  static propTypes = {
-    goTo: PropTypes.func.isRequired,
-  };
-
   render() {
     return (
       <Flexbox
@@ -128,31 +118,6 @@ export default class Home extends React.Component {
           <Card className="chapter2" >
             <span>Ohio State</span>
           </Card>
-        </Flexbox>
-        <Flexbox
-          alignItems="center"
-          className="footer"
-          width="100%"
-        >
-          <img
-            alt="logo"
-            className="title"
-            src="assets/logo.png"
-          />
-          <Flexbox
-            className="menus"
-            alignItems="center"
-          >
-            <a href="#events" className="menu-item"> Events</a>
-            <a href="#story" className="menu-item"> Our Story</a>
-            <a href="#chapters"className="menu-item"> Chapters</a>
-            <Button
-              color="accent"
-              className="menu-item"
-              label="Start a chapter"
-              onClick={() => this.props.goTo(CHAPTERSTART)}
-            />
-          </Flexbox>
         </Flexbox>
       </Flexbox>
     );
