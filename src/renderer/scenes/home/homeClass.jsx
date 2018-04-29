@@ -90,10 +90,12 @@ export default class Home extends React.Component {
           </Card>
         </Flexbox>
         <Flexbox
+          alignItems="center"
           id="story"
           className="our-story"
           element="section"
           flexDirection="column"
+          justifyContent="center"
           width="100%"
         >
           <h5>Our Story</h5>

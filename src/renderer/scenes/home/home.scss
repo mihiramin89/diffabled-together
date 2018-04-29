@@ -58,11 +58,17 @@
   .our-story {
     background-color: #C3E8E5;
     color: #48566D;
-    display: block;
     margin-top: 50px;
     padding-left: 20px;
     width: calc(100% - 20px);
     padding-bottom: 50px;
+
+    h5 {
+      display: inline-block;
+      margin-bottom: 0;
+      text-align: left;
+      width: 80%;
+    }
   }
 
   .existing-chapters {
