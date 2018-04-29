@@ -2,11 +2,11 @@
   background-color: #FFF;
   position: relative;
   top: 700px;
+  display: block;
   // max-width: 1196px;
 
   .description {
     color: #48566D;
-    display: block;
     margin-bottom: 50px;
 
     .external-link {
@@ -19,31 +19,39 @@
     display: block;
     height: auto;
 
-    .event-item {
-      margin-left: 10%;
-      max-width: 250px;
+    .event-item span {
+      position: relative;
+      right: 20px;
+      text-align: right;
+      top: calc(100% - 30px);
     }
 
     .main-event1 {
       background-color: #48566D;
       color: #FFF;
       height: 200px;
+      max-width: 300px;
+      width: 50%;
     }
 
     .main-event2 {
       background-color: #F7F6F0;
-      color: #48566D;
+      color: #FC615E;
       height: 200px;
-      margin-left: 60%;
-      margin-top: 60px;
+      margin-left: 5px;
+      margin-top: 90px;
+      width: 30%;
     }
 
     .main-event3 {
       color: #48566D;
       background-color: #C3E8E5;
       height: 200px;
-      margin-left: 40%;
-      margin-top: -90px;
+      margin-left: 30%;
+      margin-top: -60px;
+      max-width: 250px;
+      position: relative;
+      width: 30%;
     }
   }
 
@@ -52,6 +60,9 @@
     color: #48566D;
     display: block;
     margin-top: 50px;
+    padding-left: 20px;
+    width: calc(100% - 20px);
+    padding-bottom: 50px;
   }
 
   .existing-chapters {
@@ -59,7 +70,12 @@
     color: #FFF;
 
     .-description {
-      max-width: 50%;
+      margin-left: 20px;
+      margin-right: 20px;
+      display: block;
+      width: 40%;
+      max-width: 400px;
+      margin-bottom: 50px;
     }
 
     .chapter1,
@@ -68,8 +84,17 @@
       color: #48566D;
       height: 200px;
       margin-right: 20px;
-      margin-top: -30px;
+      margin-top: -40px;
+      margin-bottom: 20px;
       width: 200px;
+
+      span {
+        color: #FC615E;
+        position: relative;
+        right: 20px;
+        text-align: right;
+        top: calc(100% - 30px);
+      }
     }
   }
 }
